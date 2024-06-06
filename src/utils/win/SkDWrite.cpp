@@ -45,6 +45,7 @@ static void create_dwrite_factory(IDWriteFactory** factory) {
             hr = ERROR_PROC_NOT_FOUND;
         }
         HRVM(hr, "Could not get DWriteCreateFactory proc.");
+        return;
     }
 
     HRVM(dWriteCreateFactoryProc(DWRITE_FACTORY_TYPE_SHARED,
